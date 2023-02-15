@@ -1,0 +1,37 @@
+{% load static %}
+<div class="intro intro-carousel swiper position-relative">
+
+    <div class="swiper-wrapper">
+        {% for house in houses %}
+            <div class="swiper-slide carousel-item-a intro-item bg-image"
+             style="background-image: url({{ house.photo_main.url }})">
+            <div class="overlay overlay-a"></div>
+            <div class="intro-content display-table">
+                <div class="table-cell">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="intro-body">
+                                    <p class="intro-title-top">{{ house.realtor }}
+                                        <br> {{ house.lat }}{{ house.lng }}
+                                    </p>
+                                    <h1 class="intro-title mb-4 ">
+                                        <span class="color-b">{{ house.city }} </span>
+                                    </h1>
+                                    <p class="intro-subtitle intro-price">
+                                        <a href="#"><span class="price-a">$ {{ house.price }}</span></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+
+
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
