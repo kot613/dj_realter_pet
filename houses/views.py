@@ -1,19 +1,22 @@
 from django.db.models import Q
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
+from utils.views import TitleMixin
 from .models import House
 
 
-class HousesListView(ListView):
+class HousesListView(TitleMixin, ListView):
     template_name = 'houses/list.html'
     model = House
     context_object_name = 'houses_list'
+    title = 'Our Amazing Houses'
 
 
-class HouseDetailView(DetailView):
+class HouseDetailView(TitleMixin, DetailView):
     template_name = 'houses/detail.html'
     model = House
     context_object_name = 'house'
+    title = 'House'
 
 
 def search_house(request):

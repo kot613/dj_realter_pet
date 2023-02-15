@@ -1,5 +1,7 @@
 asgiref==3.6.0
 Django==4.1.6
+django-admin-interface==0.24.2
+django-colorfield==0.8.0
 django-dump-load-utf8==0.0.4
 django-extensions==3.2.1
 flake8==6.0.0
@@ -9,5 +11,6 @@ mccabe==0.7.0
 Pillow==9.4.0
 pycodestyle==2.10.0
 pyflakes==3.0.1
+six==1.16.0
 sqlparse==0.4.3
 tzdata==2022.7

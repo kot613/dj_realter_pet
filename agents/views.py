@@ -1,21 +1,24 @@
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView
+from utils.views import TitleMixin
 from .models import Agent, MessageAgent
 from houses.models import House
 from .forms import MessageForm
 
 
-class AgentsListView(ListView):
+class AgentsListView(TitleMixin, ListView):
     template_name = 'agents/list.html'
     model = Agent
     context_object_name = 'agents_list'
+    title = 'Our agents'
 
 
-class AgentsDetailView(DetailView):
+class AgentsDetailView(TitleMixin, DetailView):
     template_name = 'agents/detail.html'
     model = Agent
     slug_url_kwarg = 'slug'
     context_object_name = 'agent'
+    title = 'Agent'
 
     def get_context_data(self, **kwargs):
         data = super().get_context_data(**kwargs)

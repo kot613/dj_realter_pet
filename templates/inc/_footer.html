@@ -35,19 +35,7 @@
               <div class="w-body-a">
                 <ul class="list-unstyled">
                   <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Site Map</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Legal</a>
-                  </li>
-                  <li class="item-list-a">
                     <i class="bi bi-chevron-right"></i> <a href="{% url 'admin:login' %}">Agent Admin</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Careers</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Affiliate</a>
                   </li>
                   <li class="item-list-a">
                     <i class="bi bi-chevron-right"></i> <a href="#">Privacy Policy</a>
@@ -81,19 +69,16 @@
           <nav class="nav-footer">
             <ul class="list-inline">
               <li class="list-inline-item">
-                <a href="#">Home</a>
+                <a href="{% url 'pages:index' %}">Home</a>
               </li>
               <li class="list-inline-item">
-                <a href="#">About</a>
+                <a href="{% url 'pages:about' %}">About</a>
               </li>
               <li class="list-inline-item">
-                <a href="#">Property</a>
+                <a href="{% url 'agents:list' %}">Agents</a>
               </li>
               <li class="list-inline-item">
-                <a href="#">Blog</a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">Contact</a>
+                <a href="{% url 'houses:list' %}">Houses</a>
               </li>
             </ul>
           </nav>

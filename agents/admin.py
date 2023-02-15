@@ -24,6 +24,6 @@ class AgentAdmin(admin.ModelAdmin):
 
 @admin.register(MessageAgent)
 class MessageAgentAdmin(admin.ModelAdmin):
-    list_display = ['id', 'name', 'agent']
+    list_display = ['id', 'name', 'agent', 'is_read']
     list_display_links = ('id', 'name')
     list_per_page = 10

@@ -25,6 +25,7 @@ class MessageAgent(models.Model):
     name = models.CharField(max_length=255)
     email = models.CharField(max_length=50)
     comment = models.TextField()
+    is_read = models.BooleanField(default=False)
     agent = models.ForeignKey(Agent, on_delete=models.CASCADE)
 
     def __str__(self):
