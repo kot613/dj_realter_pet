@@ -5,9 +5,7 @@ from django.urls import reverse
 
 
 class Agent(models.Model):
-    """
-        model Agent
-    """
+    """ model Agent """
     name = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255, unique=True, db_index=True)
     photo = models.ImageField(upload_to='agents_photo/%Y/%m/%d/')
@@ -22,6 +20,7 @@ class Agent(models.Model):
 
 
 class MessageAgent(models.Model):
+    """ model Message Agent """
     name = models.CharField(max_length=255)
     email = models.CharField(max_length=50)
     comment = models.TextField()

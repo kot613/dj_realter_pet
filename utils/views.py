@@ -1,4 +1,5 @@
 class TitleMixin:
+    """adding an attribute title """
     title = None
 
     def get_context_data(self, **kwargs):

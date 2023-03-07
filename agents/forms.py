@@ -4,6 +4,7 @@ from .models import MessageAgent
 
 
 class MessageForm(forms.ModelForm):
+    """ Form for messages to agents """
     name = forms.CharField(widget=forms.TextInput(attrs={
         'class': 'form-control form-control-lg form-control-a',
         'placeholder': 'Name *'}))

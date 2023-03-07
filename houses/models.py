@@ -5,7 +5,7 @@ from agents.models import Agent
 
 class House(models.Model):
     """
-        house model for db
+        House model for db
     """
     VERY_POOR = 1
     POOR = 2

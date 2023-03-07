@@ -6,12 +6,14 @@ register = template.Library()
 
 @register.inclusion_tag('inc/_slider.html')
 def get_houses():
+    """ Getting a list of houses for the slider """
     houses = House.objects.order_by('-list_date')[:5]
     return {'houses': houses}
 
 
 @register.inclusion_tag('inc/_search.html')
 def search():
+    """ Creation of a sample list based on data from the db """
     city = ['All city'] + list(set(House.objects.values_list('city', flat=True)))
     bedrooms = ['Any'] + list(set(House.objects.values_list('bedrooms', flat=True)))
     bathrooms = ['Any'] + list(set(House.objects.values_list('bathrooms', flat=True)))

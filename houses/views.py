@@ -6,6 +6,9 @@ from .models import House
 
 
 class HousesListView(TitleMixin, ListView):
+    """
+    View for list houses
+    """
     template_name = 'houses/list.html'
     model = House
     context_object_name = 'houses_list'
@@ -13,6 +16,9 @@ class HousesListView(TitleMixin, ListView):
 
 
 class HouseDetailView(TitleMixin, DetailView):
+    """
+    View for house details
+    """
     template_name = 'houses/detail.html'
     model = House
     context_object_name = 'house'
@@ -20,6 +26,7 @@ class HouseDetailView(TitleMixin, DetailView):
 
 
 def search_house(request):
+    """ Search in the db from the form """
     search = None
     keyword = request.GET.get('keyword')
     city = request.GET.get('city')
