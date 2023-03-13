@@ -13,4 +13,6 @@ media
 venv
 
 migrations
-/*/migrations/
+/agents/migrations/
+/houses/migrations/
+/pages/migrations/
