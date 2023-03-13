@@ -64,6 +64,10 @@ Modified admin panel.
 
 ## Project setup
 
+##### Versions
+- [Python 3.11](https://www.python.org)
+- [Django 4.1.6](https://www.djangoproject.com)
+- [Bootstrap v5.2.3](https://getbootstrap.com)
 
 ### Setting up a virtual environment
 At the root of the project, create a virtual environment using the command:
